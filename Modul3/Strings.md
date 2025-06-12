@@ -56,6 +56,8 @@ console.log(str1 === str2); // false (type + value)
 
 | `.split(",")`        | Splits string into array                | `"a,b,c".split(",")` → `["a", "b", "c"]` |
 
+the only difference between slice and substring, that substring donot accept negative values.
+
 compare() does not exist directly; use localeCompare() instead.
 
 fromCharCode() and fromCodePoint() are static methods on the String class, not on string instances.
@@ -63,7 +65,7 @@ fromCharCode() and fromCodePoint() are static methods on the String class, not o
 replaceAll() is available in modern browsers (ES2021+).
 
 LocaleCompare()
-📌 What it does:
+ What it does:
 Compares two strings based on locale (language & region rules).
 
 Returns:
@@ -75,13 +77,13 @@ Returns:
 1 → if string1 > string2
 
  search()
-📌 What it does:
+ What it does:
 Searches a string using a regular expression.
 
 Returns the index of the first match, or -1 if not found
 
 String.raw()
-📌 What it does:
+ What it does:
 It returns a raw string where escape sequences (like \n, \t) are not interpreted. or in file paths/.
 
 Mainly used with template literals.

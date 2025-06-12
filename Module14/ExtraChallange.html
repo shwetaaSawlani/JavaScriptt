@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fruit List with Event Delegation</title>
+</head>
+<body>
+
+  <h3>Fruit List</h3>
+  <ul id="fruitList">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+  </ul>
+
+  <input type="text" id="fruitInput" placeholder="Enter fruit name">
+  <button id="addFruit">Add Fruit</button>
+
+  <script>
+    const fruitList = document.getElementById("fruitList");
+    const fruitInput = document.getElementById("fruitInput");
+    const addFruit = document.getElementById("addFruit");
+
+    // Event Delegation: One listener for all <li> clicks
+    fruitList.addEventListener("click", function(event) {
+      if (event.target.tagName === "LI") {
+        alert("You clicked: " + event.target.textContent);
+      }
+    });
+
+    // Add any fruit entered in input box
+    addFruit.addEventListener("click", function() {
+      const fruitName = fruitInput.value.trim();
+      if (fruitName !== "") {
+        const newFruit = document.createElement("li");
+        newFruit.textContent = fruitName;
+        fruitList.appendChild(newFruit);
+        
+      } else {
+        alert("Please enter a fruit name.");
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@ An array in JavaScript is a special variable that can hold multiple values in a 
 🔹 Syntax
 
 let fruits = ["apple", "banana", "orange"];
-Here, fruits is an array that stores 3 string values.
+
 
 Key Features
 Arrays are ordered collections (index-based).
@@ -21,18 +21,18 @@ let nested = [1, [2, 3], [4, 5]];
 | Method                                     | Description                                      | Example                   |
 | ------------------------------------------ | ------------------------------------------------ | ------------------------- |
 | **`at(index)`**                            | Returns the element at a specific index          | `arr.at(1)`               |
-| **`concat()`**                             | Merges two or more arrays                        | `[1, 2].concat([3, 4])`   |
+| **`concat()`**                             | Merges two or more arrays                        | `[1, 2].concat([3, 4])`   |no
 | **`toString()`**                           | Converts the array to a string                   | `[1, 2, 3].toString()`    |
-| **`unshift(item)`**                        | Adds item(s) to the **start** of array           | `arr.unshift("a")`        |
-| **`shift()`**                              | Removes and returns the **first** element        | `arr.shift()`             |
-| **`slice(start, end)`**                    | Returns a portion of the array (non-destructive) | `arr.slice(1, 3)`         |
-| **`splice(start, deleteCount, items...)`** | Adds/removes elements (destructive)              | `arr.splice(1, 2, "x")`   |
+| **`unshift(item)`**                        | Adds item(s) to the **start** of array           | `arr.unshift("a")`        |yes
+| **`shift()`**                              | Removes and returns the **first** element        | `arr.shift()`             |yes
+| **`slice(start, end)`**                    | Returns a portion of the array (non-destructive) | `arr.slice(1, 3)`         |no
+| **`splice(start, deleteCount, items...)`** | Adds/removes elements (destructive)              | `arr.splice(1, 2, "x")`   |yes
 | **`sort()`**                               | Sorts the array elements (as strings by default) | `arr.sort()`              |yes
 | **`copyWithin(target, start, end)`**       | Copies a part of array to another location       | `arr.copyWithin(1, 2, 4)` |yes
-| **`push(item)`**                           | Adds item(s) to the **end** of array             | `arr.push("z")`           |
-| **`pop()`**                                | Removes and returns the **last** element         | `arr.pop()`               |
-| **`join(separator)`**                      | Joins all elements into a string                 | `arr.join(", ")`          |
-| **`includes(value)`**                      | Checks if array contains a value                 | `arr.includes("apple")`   |
+| **`push(item)`**                           | Adds item(s) to the **end** of array             | `arr.push("z")`           |yes
+| **`pop()`**                                | Removes and returns the **last** element         | `arr.pop()`               |yes
+| **`join(separator)`**                      | Joins all elements into a string                 | `arr.join(", ")`          |no
+| **`includes(value)`**                      | Checks if array contains a value                 | `arr.includes("apple")`   |no
 
 | Method     | Purpose                        | Returns           |
 | ---------- | ------------------------------ | ----------------- |
@@ -40,7 +40,7 @@ let nested = [1, [2, 3], [4, 5]];
 | `fill()`   | Replace elements with a value  | Modified array    |yes
 | `reduce()` | Reduce array to a single value | Single value      |no
 | `filter()` | Keep only elements that match  | New array         |
-| `map()`    | Transform all elements         | New array         |
+| `map()`    | Transform all elements         | New array         |no
 
 Method	Purpose	Returns	Mutates original array?
 find()	Returns first match based on a condition	Single element / undefined	
@@ -58,10 +58,26 @@ curr = current element
 
 0 = initial value of the accumulator
 
-map()
+**map()**
 Returns a new array by applying a function to each element.
-filter()
+**filter()**
 Returns a new array with elements that pass a condition.
-fill()
-Fills all or part of the array with a static value.
 
+**splice**
+
+let arr = [1, 34, 2, 2, 8 ,9];
+console.log(arr.splice(1, 0, 8));
+What it does:
+Starts at index 1 (which is 34)
+
+Deletes 0 elements
+
+Inserts 8 at index 1
+
+Result:
+The splice() returns the removed elements, which in this case is an empty array ([])
+The original array gets modified
+
+**fill**
+arr.fill (value, start, end); 
+modifies the array

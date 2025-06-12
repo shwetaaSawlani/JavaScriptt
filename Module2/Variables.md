@@ -16,6 +16,7 @@ Reference Error: The second console.log(age) will throw a Reference Error becaus
 
 Immutability with const
 const is used to declare variables that should not be reassigned after their initial assignment. This keyword is also block-scoped like let.
+
 Const : Block Scope, Neither Re-assignable nor Re-declarabele
 
 
@@ -36,7 +37,8 @@ When to Use const:
 Use const by default for variables that are not expected to change throughout their lifetime. This clearly communicates your intent and helps prevent accidental modifications, leading to more robust code. If you later find that a variable declared with const needs to be re-assigned, you can easily change it to let.
 
 
-Important Note on Objects/Arrays with const: While const prevents re-assignment of the variable itself, it does not make the value immutable if that value is an object or an array. You can still modify the properties of an object or the elements of an array declared with const*/
+Important Note on Objects/Arrays with const:
+ While const prevents re-assignment of the variable itself, it does not make the value immutable if that value is an object or an array. You can still modify the properties of an object or the elements of an array declared with const*/
 
 
 Hoisting refers to the behaviour where JavaScript moves the declarations of variables, functions, and classes to the top of their scope during the compilation phase. This can sometimes lead to surprising results, especially when using var, let, const, or function expressions.

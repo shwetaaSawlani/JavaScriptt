@@ -2,7 +2,7 @@
 /* I. Primitive Data Types (7 types)
 
 
-String
+**String***
 
 Represents textual data.
 Enclosed in single quotes ('...'), double quotes ("..."), or backticks (`...`) for template literals.
@@ -370,4 +370,30 @@ Number.MIN_VALUE	      : The smallest positive number (~5e-324).
 Number.NaN	Special value representing "Not a Number".
 Number.NEGATIVE_INFINITY	Represents negative infinity.
 Number.POSITIVE_INFINITY	Represents positive infinity.
+
+3. NaN is not equal to itself: NaN Stands for “Not-a-Number”, It is used to represent a computational error. NaN is technically of type number.
+1
+console.log(typeof NaN);
+2
+console.log(NaN === NaN);
+
+
+Output
+number
+false
+
+
+4. A Symbol is Never Equal to Another One : Symbol is a unique and immutable data type often used for creating private properties and methods. Symbols are never equal to any other Symbol.
+1
+let s1 = Symbol("abc");
+2
+let s2 = Symbol("abc");
+3
+console.log(s1 === s2);
+
+
+Output
+false
+
+
 

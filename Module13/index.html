@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p> Submit your Basic details </p>
+    <lable>Enter your name:</lable>
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <lable>Enter your age:</lable>
+    <input type="number" id="age" placeholder="Enter your age"><br><br>
+    <lable>Enter your email:</lable>
+    <input type="email" id="email" placeholder="Enter your email"><br><br>
+    <button onclick="submitDetails()" id="bu">Submit</button>
+    <h3 id="result"></h3>
+    <script>
+        function submitDetails() {
+            let name = document.getElementById("bu");
+            name.innerText= "Submitted Successfully";
+        }
+    </script>
+</body>
+</html>

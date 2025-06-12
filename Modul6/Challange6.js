@@ -15,9 +15,24 @@ const arr3 = ["apple", "banana", "apple", "orange", "banana", "apple"];
 
 const counts = {};
 
-for (let item of arr) {
+for (let item of arr3) {
   counts[item] = (counts[item] || 0) + 1;
 }
 
 console.log(counts);
 
+
+// Flatten a nested array recursively
+function flattenArray(arr) {
+    let result = [];
+
+    for (let item of arr) {
+        if (Array.isArray(item)) {
+            result = result.concat(flattenArray(item)); // recursive call
+        } else {
+            result.push(item);
+        }
+    }
+
+    return result;
+}

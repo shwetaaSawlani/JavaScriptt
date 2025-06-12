@@ -16,6 +16,6 @@ function reverse(str) {
   return reversed;
 }
 
-console.log(reverse(`hi my name is shweta`));  
+console.log(reverse("hi my name is shweta"));  
 
 

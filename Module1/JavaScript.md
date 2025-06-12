@@ -13,6 +13,7 @@ it is a casesensitive and scripting.
 4.Object-oriented & functional: Supports both programming styles. 
 
 5.Asynchronous programming: Uses promises, async/await, and callbacks for non-blocking operations. 
+6, interpreted
 
  
  
@@ -76,4 +77,9 @@ E.g., ES5, ES6 (2015), ES7 (2016), ..., ES2024 — new features are added yearly
 Introduced major features like let/const, arrow functions, promises, classes, modules, etc. 
 Js is implementation of ECMASCRIPT
 Actionscript is also implementation of ECMASCRIPT
+
+
+What is Cross-Platform?
+Cross-platform refers to the ability of a software application or system to run on multiple operating systems or platforms without requiring significant modifications. This means the application can function seamlessly on different platforms such as Windows, macOS, Linux, iOS, Android, or even web browsers.
+
  
